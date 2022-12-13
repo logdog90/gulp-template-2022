@@ -1,4 +1,5 @@
 const { src, dest, watch, series, parallel } = require('gulp')
+const browserSync = require('browser-sync').create()
 
 // Плагины
 const fileInclude = require('gulp-file-include')
@@ -15,6 +16,16 @@ const html = () => {
     }))
     .pipe(size({ title: 'После сжатия' }))
     .pipe(dest('./public'))
+    .pipe(browserSync.stream())
+}
+
+// Сервер
+const server = () => {
+  browserSync.init({
+    server: {
+      baseDir: './public'
+    }
+  })
 }
 
 // Наблюдение
@@ -27,4 +38,4 @@ exports.html = html
 exports.watch = watcher
 
 // Экспорт сборки
-exports.dev = series(html, watcher)
+exports.dev = series(html, parallel(watcher, server))
