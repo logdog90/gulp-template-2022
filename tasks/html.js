@@ -22,7 +22,7 @@ const html = () => {
     }))
     .pipe(fileInclude())
     .pipe(size({ title: 'До сжатия' }))
-    .pipe(htmlmin(settings.htmlmin))
+    .pipe(htmlmin())
     .pipe(size({ title: 'После сжатия' }))
     .pipe(dest(path.html.dest))
 }
