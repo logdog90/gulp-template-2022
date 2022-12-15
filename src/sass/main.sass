@@ -1,0 +1,11 @@
+$base-font-size: 16px
+$base-title-font-size: 32px
+$base-subtitle-font-size: 24px
+
+@mixin ph
+  @media (max-width: 700px)
+    @content
+  
+@import './blocks/*.sass'
+// @import './blocks/base.sass'
+// @import './blocks/template.sass'
