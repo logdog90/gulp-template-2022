@@ -33,4 +33,10 @@ module.exports = {
     watch: `${pathScr}/img/**/*.{png,jpg,jpeg,gif,svg}`,
     dest: `${pathDest}/img`,
   },
+
+  fonts: {
+    src: `${pathScr}/fonts/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}`,
+    watch: `${pathScr}/fonts/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}`,
+    dest: `${pathDest}/fonts`,
+  },
 }

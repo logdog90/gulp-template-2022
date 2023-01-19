@@ -10,6 +10,7 @@ const html = require('./tasks/html.js')
 const sass = require('./tasks/sass.js')
 const js = require('./tasks/js.js')
 const img = require('./tasks/img.js')
+const fonts = require('./tasks/fonts.js')
 
 // Сервер
 const server = () => {
@@ -26,6 +27,7 @@ const watcher = () => {
   watch(path.sass.watch, sass).on('all', browserSync.reload)
   watch(path.js.watch, js).on('all', browserSync.reload)
   watch(path.img.watch, img).on('all', browserSync.reload)
+  watch(path.fonts.watch, fonts).on('all', browserSync.reload)
 }
 
 // Экспорт задач
@@ -33,10 +35,11 @@ exports.html = html
 exports.sass = sass
 exports.js = js
 exports.img = img
+exports.fonts = fonts
 
 // Экспорт сборки
 exports.dev = series(
   clear,
-  parallel(html, sass, js, img),
+  parallel(html, sass, js, img, fonts),
   parallel(watcher, server)
 )
