@@ -19,7 +19,7 @@ const webpCss = require('gulp-webp-css')
 
 // Обработка SASS
 const sass = () => {
-  return src(path.sass.src, { sourcemaps: true })
+  return src(path.sass.src, { sourcemaps: settings.isDev })
     .pipe(plumber({
       errorHandler: notify.onError(error => ({
         title: 'SASS',
@@ -33,11 +33,11 @@ const sass = () => {
     .pipe(shorthand())
     .pipe(gulpGroupCssMediaQueries())
     .pipe(size({ title: 'main.css' }))
-    .pipe(dest(path.sass.dest, { sourcemaps: true }))
+    .pipe(dest(path.sass.dest, { sourcemaps: settings.isDev }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(csso())
     .pipe(size({ title: 'main.min.css' }))
-    .pipe(dest(path.sass.dest, { sourcemaps: true }))
+    .pipe(dest(path.sass.dest, { sourcemaps: settings.isDev }))
 }
 
 module.exports = sass
