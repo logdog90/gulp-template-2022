@@ -15,6 +15,7 @@ const shorthand = require('gulp-shorthand')
 const gulpGroupCssMediaQueries = require('gulp-group-css-media-queries')
 const vSass = require('gulp-sass')(require('sass'))
 const sassGlob = require('gulp-sass-glob')
+const webpCss = require('gulp-webp-css')
 
 // Обработка SASS
 const sass = () => {
@@ -27,6 +28,7 @@ const sass = () => {
     }))
     .pipe(sassGlob())
     .pipe(vSass())
+    .pipe(webpCss())
     .pipe(autoprefixer())
     .pipe(shorthand())
     .pipe(gulpGroupCssMediaQueries())

@@ -15,6 +15,7 @@ const rename = require('gulp-rename')
 const size = require('gulp-size')
 const shorthand = require('gulp-shorthand')
 const gulpGroupCssMediaQueries = require('gulp-group-css-media-queries')
+const webpCss = require('gulp-webp-css')
 
 // Обработка CSS
 const css = () => {
@@ -27,6 +28,7 @@ const css = () => {
     }))
     .pipe(concat('main.css'))
     .pipe(cssimport())
+    .pipe(webpCss())
     .pipe(autoprefixer())
     .pipe(shorthand())
     .pipe(gulpGroupCssMediaQueries())
