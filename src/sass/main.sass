@@ -1,11 +1,32 @@
-$base-font-size: 16px
-$base-title-font-size: 32px
-$base-subtitle-font-size: 24px
+@import '../../node_modules/bootstrap/scss/bootstrap-grid.scss'
+@import 'base'
 
-@mixin ph
-  @media (max-width: 700px)
-    @content
-  
-@import './blocks/*.sass'
-// @import './blocks/base.sass'
-// @import './blocks/template.sass'
+.block
+    background-color: #ddd
+    border: 1px solid #aaa
+    padding: 20px
+    text-align: center
+    height: 100%
+
+.header
+    min-height: 90px
+    margin-bottom: 130px
+
+.promo
+    min-height: 460px
+    margin-bottom: 110px
+
+.clients
+    min-height: 80px
+    margin-bottom: 170px
+
+.pricing
+    min-height: 480px
+    margin-bottom: 235px
+
+.team
+    min-height: 360px
+    margin-bottom: 180px
+
+.footer
+    min-height: 380px
