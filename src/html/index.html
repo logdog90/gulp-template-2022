@@ -8,9 +8,60 @@
   <title>Мой базовый шаблон на Bootstrap 5</title>
 </head>
 <body>
-  @@include('./header.html')
-  @@include('./main.html')
-  @@include('./footer.html')
+  <!-- @@include('./sections/header.html')
+  @@include('./sections/main.html')
+  @@include('./sections/footer.html') -->
+
+  <div class="container">
+    <section class="row mb-3 gy-3">
+      <div class="col">
+        <div class="block">15</div>
+      </div>
+    </section>
+    <section class="row mb-3 gy-3">
+      <div class="col-tb-4 col-lt-5">
+        <div class="block">5</div>
+      </div>
+      <div class="col-tb-7 col-lt-5">
+        <div class="block">5</div>
+      </div>
+      <div class="col-tb-4 col-lt-5">
+        <div class="block">5</div>
+      </div>
+    </section>
+    <section class="row mb-3 gy-3">
+      <div class="col-tb-3 col-lt-3">
+        <div class="block">3</div>
+      </div>
+      <div class="col-tb-2 col-lt-3">
+        <div class="block">3</div>
+      </div>
+      <div class="col-tb-5 col-lt-3">
+        <div class="block">3</div>
+      </div>
+      <div class="col-tb-2 col-lt-3">
+        <div class="block">3</div>
+      </div>
+      <div class="col-tb-3 col-lt-3">
+        <div class="block">3</div>
+      </div>
+    </section>
+    <section class="row gy-3">
+      <div class="col-tb-3 col-lt-2">
+        <div class="block">2</div>
+      </div>
+      <div class="col-tb-2 col-lt-6">
+        <div class="block">6</div>
+      </div>
+      <div class="col-tb-5 col-lt-4">
+        <div class="block">4</div>
+      </div>
+      <div class="col-tb-5 col-lt-3">
+        <div class="block">3</div>
+      </div>
+    </section>
+  </div>
+
   <script src="./js/main.js"></script>
 </body>
 </html>
