@@ -27,7 +27,9 @@ const sass = () => {
       }))
     }))
     .pipe(sassGlob())
-    .pipe(vSass())
+    .pipe(vSass({
+      includePaths: ['node_modules/bootstrap/scss']
+    }))
     .pipe(webpCss())
     .pipe(autoprefixer())
     .pipe(shorthand())

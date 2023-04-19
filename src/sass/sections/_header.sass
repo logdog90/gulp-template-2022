@@ -1,0 +1,9 @@
+.header
+    @extend .row
+    min-height: 80px
+    margin-bottom: 130px
+    @include media-breakpoint-up(md)
+        &__logo
+            @include make-col(3)
+        &__nav
+            @include make-col(9)

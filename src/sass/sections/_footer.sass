@@ -1,0 +1,17 @@
+.footer
+    @extend .row
+    min-height: 380px
+    @include media-breakpoint-up(md)
+        &__social
+            @include make-col(6)
+        &__contacts
+            @include make-col(6)
+        &__form
+            @include make-col(12)
+    @include media-breakpoint-up(lg)
+        &__social
+            @include make-col(4)
+        &__contacts
+            @include make-col(3)
+        &__form
+            @include make-col(5)

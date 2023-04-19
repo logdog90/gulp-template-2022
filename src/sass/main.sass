@@ -1,32 +1,18 @@
+// Переменные, миксины и функции Bootstrap 5
+@import "functions"
+@import "variables"
+@import "mixins/breakpoints"
+@import "mixins/container"
+@import "mixins/grid"
+
+// Кастомизация сетки Bootstrap 5 и базовые стили
+@import 'grid-custom'
 @import 'base'
-@import 'mygrid'
 
-.block
-    background-color: #ddd
-    border: 1px solid #aaa
-    padding: 20px
-    text-align: center
-    height: 100%
-
-.header
-    min-height: 90px
-    margin-bottom: 130px
-
-.promo
-    min-height: 460px
-    margin-bottom: 110px
-
-.clients
-    min-height: 80px
-    margin-bottom: 170px
-
-.pricing
-    min-height: 480px
-    margin-bottom: 235px
-
-.team
-    min-height: 360px
-    margin-bottom: 180px
-
-.footer
-    min-height: 380px
+// Секции
+@import './sections/header'
+@import './sections/clients'
+@import './sections/promo'
+@import './sections/pricing'
+@import './sections/team'
+@import './sections/footer'

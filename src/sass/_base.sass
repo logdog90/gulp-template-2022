@@ -27,3 +27,20 @@ h1, p
     margin-left: -10000px
     background: transparent
     font-size: 0
+
+.block
+    background-color: #ddd
+    border: 1px solid #aaa
+    padding: 20px
+    text-align: center
+    height: 100%
+
+.container
+    @include make-container()
+    @include make-max-width-container()
+
+.row
+    @include make-row()
+    --bs-gutter-y: 30px
+    & > *
+        @include make-col-ready()

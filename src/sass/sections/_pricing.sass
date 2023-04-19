@@ -1,0 +1,10 @@
+.pricing
+    @extend .row
+    min-height: 480px
+    margin-bottom: 235px
+    @include media-breakpoint-up(sm)
+        &__item
+            @include make-col(6)
+    @include media-breakpoint-up(md)
+        &__item
+            @include make-col(4)

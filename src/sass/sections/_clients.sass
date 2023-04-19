@@ -1,0 +1,10 @@
+.clients
+    @extend .row
+    min-height: 80px
+    margin-bottom: 170px
+    @include media-breakpoint-up(md)
+        &__item
+            @include make-col(4)
+    @include media-breakpoint-up(lg)
+        &__item
+            @include make-col(2)
